@@ -9,6 +9,7 @@
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
     <title>Acme Rockets</title>
     <link href="./css/style.css" rel="stylesheet" />
+    <script defer src="js/main.js"></script>
   </head>
   <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
     <header class="bg-teal-700 text-white sticky top-0 z-10">
@@ -18,17 +19,44 @@
         </h1>
         <div>
           <button
-            class="text-3xl sm:hidden focus:outline-none"
-            id="mobile-open-button"
+            class="text-3xl md:hidden focus:outline-none cursor-pointer relative w-8 h-8"
+            id="hamburger-button"
           >
-            &#9776;
+            <!--            &#9776;-->
+            <div
+              class="bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute before:transition-all before:duration-500 before:-translate-x-4 before:-translate-y-3 after:content-[''] after:bg-white after:w-8 after:h-1 after:rounded after:absolute after:transition-all after:duration-500 after:-translate-x-4 after:translate-y-3"
+            ></div>
           </button>
-          <nav aria-label="main" class="hidden sm:block space-x-8 text-xl">
+          <nav aria-label="main" class="hidden md:block space-x-8 text-xl">
             <a class="hover:opacity-90" href="#rockets">Our Rockets</a>
             <a class="hover:opacity-90" href="#testimonials">Testimonials</a>
             <a class="hover:opacity-90" href="#contact">Contact us</a>
           </nav>
         </div>
+      </section>
+      <section
+        class="absolute top-68 bg-black w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden"
+        id="mobile-menu"
+      >
+        <!--        <button class="text-8xl self-end px-6">&times;</button>-->
+        <nav
+          aria-label="mobile"
+          class="flex flex-col min-h-screen items-center py-8"
+        >
+          <a class="w-full text-center py-6 hover:opacity-90" href="#hero"
+            >Home</a
+          ><a class="w-full text-center py-6 hover:opacity-90" href="#rockets"
+            >Rockets</a
+          ><a
+            class="w-full text-center py-6 hover:opacity-90"
+            href="#testimonials"
+            >Testimonials</a
+          ><a class="w-full text-center py-6 hover:opacity-90" href="#contact"
+            >Contact Us</a
+          ><a class="w-full text-center py-6 hover:opacity-90" href="#footer"
+            >Legal</a
+          >
+        </nav>
       </section>
     </header>
     <main class="max-w-4xl mx-auto">
